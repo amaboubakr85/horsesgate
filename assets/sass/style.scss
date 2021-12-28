@@ -1,0 +1,500 @@
+$primary_color: #e7c139;
+$secondary_color: #212121;
+$main_color: #ffffff;
+$alt_color: #07324c;
+
+@font-face {
+  font-family: 'HelveticaNeueLT Arabic 55 Roman';
+  src: url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.eot');
+  src: url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/6184b9bbcb2982ca518dc0c37b9d3199.svg#HelveticaNeueLT Arabic 55 Roman')
+      format('svg');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'HelveticaNeueLT Arabic 55 Roman';
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  .nav-main {
+    background-color: $primary_color;
+
+    .navbar-nav.main-menu {
+      .nav-item {
+        margin: 0 0.5rem;
+        &::after {
+          transition: width 0.5s;
+          content: '';
+          display: block;
+          height: 2px;
+          width: 0px;
+          background: $secondary_color;
+          margin-top: 4px;
+        }
+        &.active::after {
+          width: 100%;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &.active {
+          font-weight: bold;
+        }
+        .nav-link {
+          color: $secondary_color !important;
+        }
+      }
+    }
+    .social-media {
+      .navbar-nav.social {
+        .nav-item {
+          .nav-link {
+            color: $alt_color;
+          }
+        }
+      }
+    }
+  }
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.homepage {
+  .news-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 1rem;
+    .card {
+      border-radius: 0 !important;
+      border: 0 !important;
+      .card-img {
+        border-radius: 0 !important;
+      }
+      .card-img-overlay {
+        border-radius: 0 !important;
+        a {
+          color: $main_color;
+          text-decoration: none;
+        }
+      }
+    }
+    .two {
+      grid-row: 1 / span 2;
+      grid-column: 2 / span 2;
+      .card-img-overlay {
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        .card-lbl {
+          background: $primary_color;
+          padding: 0.3rem 0.5rem;
+        }
+        .card-main-title {
+          font-size: 15px;
+          margin-bottom: 1rem;
+        }
+        .card-main-desc {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .one {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      // grid-gap: 0.8rem;
+      .card {
+        margin-bottom: 0.7rem;
+        .card-img-overlay {
+          background: rgba(0, 0, 0, 0.4);
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-end;
+          flex-direction: column;
+          .card-title {
+            color: $main_color;
+            display: block;
+            padding: 0.3rem 0.5rem;
+          }
+          .card-title.horse-sociaty {
+            background-color: #000;
+          }
+          .card-title.horse-gallery {
+            background-color: $primary_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 1000;
+  left: 2rem;
+}
+.owl-theme .owl-dots .owl-dot span {
+  border-radius: 0 !important;
+  width: 30px;
+  height: 5px;
+  background: #8c8c8c;
+}
+.owl-dot.active span {
+  background: #fff !important;
+}
+
+.subscribe {
+  background: #333 url(../images/subscribe.png) no-repeat center center/cover;
+  color: #fff;
+  height: 200px;
+  position: relative;
+  .subscribe-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    height: 100%;
+    .subscribe-container {
+      max-width: 90%;
+      margin: auto;
+      .desc {
+        margin-bottom: 2rem;
+      }
+      .subscribe-field {
+        direction: ltr;
+        input {
+          text-align: right;
+        }
+        .btn {
+          background-color: $primary_color !important;
+          color: #fff !important;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  min-height: 200px;
+  width: 100%;
+  background-color: $alt_color;
+  color: $main_color;
+  padding: 1.5rem 0.2rem;
+  a {
+    color: $main_color;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $primary_color;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+
+  .footer-container {
+    display: flex;
+    // justify-content: center;
+    align-items: flex-start;
+    .links,
+    .events,
+    .share,
+    .platinum {
+      flex: 1;
+    }
+    .platinum {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      h5 {
+        margin-bottom: 2rem;
+      }
+    }
+    .links,
+    .events,
+    .share {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .copyrights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .first {
+      span {
+        margin: 0 0.5rem;
+      }
+    }
+    .second {
+      .footer-social {
+        i {
+          margin: 0 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+.news {
+  .news-head {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      background-color: $primary_color;
+      color: $main_color;
+      padding: 0.1rem 2.7rem;
+    }
+    .more-lnk {
+      a {
+        color: $primary_color;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+  .card {
+    margin-bottom: 1rem;
+    .news-date,
+    .news-desc {
+      font-size: 14px;
+    }
+    .news-date {
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.services {
+  position: relative;
+  min-height: 400px;
+  background: #333 url(../images/services-bg.png) no-repeat center center/cover;
+  color: #fff;
+  .services-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgba($alt_color, 0.3);
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+    .services-container {
+      max-width: 95%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .items {
+        display: flex;
+        justify-content: center;
+
+        .item {
+          background: rgba(255, 255, 255, 0.5);
+          padding: 0.5rem;
+          margin: 0 0.3rem;
+          width: 16.6vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+// horse society
+.horse-society {
+  .society-head {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      background-color: $alt_color;
+      color: $main_color;
+      padding: 0.1rem 2.7rem;
+    }
+    .more-lnk {
+      a {
+        color: $alt_color;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+  .card {
+    border: 0;
+    border-radius: 0 !important;
+    a {
+      color: $main_color;
+      text-decoration: none;
+    }
+    .card-img {
+      border-radius: 0 !important;
+    }
+    .card-img-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      border-radius: 0 !important;
+    }
+  }
+}
+
+// MEDIA
+.media {
+  min-height: 550px;
+  background: $primary_color;
+  color: $main_color;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    color: $alt_color;
+    a {
+      color: $alt_color;
+      text-decoration: none;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0.5rem;
+
+    .item:first-child {
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+    }
+    .item {
+      .card {
+        border-radius: 0 !important;
+        border: 0;
+        .media-icon {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: 1rem;
+          left: 1rem;
+          background: rgba(0, 0, 0, 0.3);
+          padding: 0.2rem;
+        }
+        .card-img {
+          border-radius: 0 !important;
+          max-height: 250px;
+        }
+        .card-img-overlay {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          border-radius: 0 !important;
+          a {
+            color: $main_color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .vid-items {
+    display: grid;
+    padding: 0.5rem;
+    grid-gap: 10px;
+    .vid-item {
+      .card {
+        border: 0;
+        border-radius: 0 !important;
+        .card-img {
+          height: 250px;
+          border-radius: 0 !important;
+        }
+        .media-icon {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: 1rem;
+          left: 1rem;
+          background: rgba(0, 0, 0, 0.3);
+          padding: 0.2rem;
+        }
+        .card-img-overlay {
+          border-radius: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          a {
+            color: $main_color;
+            text-decoration: none;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .card-img {
+          height: 196px;
+        }
+      }
+    }
+  }
+}
+
+//  media query
+
+@media screen and (max-width: 414px) {
+  .homepage .news-slider {
+    display: flex;
+    flex-direction: column;
+  }
+  .services .services-content .services-container .items {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .services .services-content .services-container .items .item {
+    width: 25%;
+  }
+  .horse-society .card {
+    margin-bottom: 1rem;
+  }
+}
