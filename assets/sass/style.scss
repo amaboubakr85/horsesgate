@@ -293,6 +293,12 @@ footer {
         margin-left: 0.5rem;
       }
     }
+    .card-body {
+      a {
+        color: $secondary_color;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -450,6 +456,7 @@ footer {
         .card-img {
           height: 250px;
           border-radius: 0 !important;
+          object-fit: cover;
         }
         .media-icon {
           position: absolute;
@@ -475,6 +482,140 @@ footer {
         .card-img {
           height: 196px;
         }
+      }
+    }
+  }
+}
+
+// caldender
+.calender {
+  .calender-container {
+    .head {
+      height: 80px;
+      background-color: $alt_color;
+      color: $main_color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .calender-events {
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          margin-bottom: 10px;
+          .num {
+            background-color: $primary_color;
+            color: $main_color;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .months {
+    margin-top: 0.5rem;
+    ul {
+      li {
+        font-size: 12px;
+        color: #404041;
+        display: flex;
+        a {
+          color: lighten(#404041, 20);
+          text-decoration: none;
+          padding: 0.1rem 0.4rem;
+        }
+        &.active {
+          a {
+            background-color: $alt_color;
+            color: $main_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// horses news
+.horses-news {
+  margin-top: 1rem;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    background-color: $primary_color;
+    color: $secondary_color;
+    align-items: center;
+    padding: 0.5rem;
+    a {
+      color: $secondary_color;
+      text-decoration: none;
+    }
+  }
+  .data {
+    ul {
+      list-style: none;
+      li::before {
+        content: '\2BC0';
+        color: $primary_color;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: 0.5rem;
+      }
+      li {
+        a {
+          color: $secondary_color;
+          text-decoration: none;
+        }
+        border-bottom: 1px solid lighten($secondary_color, 80);
+        padding: 1rem 0;
+        display: flex;
+      }
+    }
+  }
+}
+
+// latest vids
+.latest-vids {
+  .head {
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: $alt_color;
+    color: $main_color;
+    padding: 10px;
+    .icon {
+      margin-left: 1rem;
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+  .content {
+    margin-top: 1rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 1rem;
       }
     }
   }
@@ -510,5 +651,12 @@ footer {
   }
   footer .copyrights {
     flex-direction: column;
+  }
+  .navbar-nav.social {
+    display: flex;
+    flex-direction: row;
+    li {
+      padding: 0.5rem;
+    }
   }
 }

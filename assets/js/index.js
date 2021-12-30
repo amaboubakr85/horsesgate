@@ -18,3 +18,14 @@ $('.owl-carousel').owlCarousel({
     },
   },
 })
+
+$('.months ul li').on('click', function (e) {
+  e.preventDefault()
+  $(this).addClass('active').siblings().removeClass('active')
+
+  let cat = $(this).data('class')
+  $('.calender-events ul li').show()
+  $('.calender-events ul li')
+    .not('.' + cat)
+    .hide()
+})
