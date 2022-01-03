@@ -2,6 +2,7 @@ $primary_color: #e7c139;
 $secondary_color: #212121;
 $main_color: #ffffff;
 $alt_color: #07324c;
+$gray: #8f8f8f;
 
 @font-face {
   font-family: 'HelveticaNeueLT Arabic 55 Roman';
@@ -616,6 +617,49 @@ footer {
       padding: 0;
       li {
         margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// news arhive
+.homepage {
+  .news-archive {
+    .head {
+      .home-title {
+        i,
+        a {
+          color: $gray;
+          text-decoration: none;
+        }
+      }
+      .news-title {
+        a {
+          color: $secondary_color;
+          text-decoration: none;
+        }
+      }
+    }
+    .content {
+      .card {
+        margin-bottom: 1rem;
+        border: none;
+        .news-date,
+        .news-desc {
+          font-size: 14px;
+        }
+        .news-date {
+          i {
+            margin-left: 0.5rem;
+          }
+        }
+        .card-body {
+          padding: 0;
+          a {
+            color: $secondary_color;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
