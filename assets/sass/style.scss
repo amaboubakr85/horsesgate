@@ -661,6 +661,24 @@ footer {
           }
         }
       }
+      .paginations {
+        margin-top: 2rem;
+        ul {
+          li {
+            padding: 0 0.8rem;
+            a {
+              text-decoration: none;
+              color: $gray;
+              &.active {
+                color: $secondary_color;
+              }
+              i {
+                color: $secondary_color;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
