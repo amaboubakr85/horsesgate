@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a7b5ca2322.js"></script>
+    <link href="./assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="./assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/style.min.css" rel="stylesheet" />
+
+    <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
+
+    <!-- calender script -->
+    <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <!-- AddEvent Settings -->
+    <script type="text/javascript">
+        window.addeventasync = function () {
+            addeventatc.settings({
+                appleical: { show: true, text: "Apple Calendar" },
+                google: { show: true, text: "Google <em>(online)</em>" },
+                office365: { show: true, text: "Office 365 <em>(online)</em>" },
+                outlook: { show: true, text: "Outlook" },
+                outlookcom: { show: true, text: "Outlook.com <em>(online)</em>" },
+                yahoo: { show: true, text: "Yahoo <em>(online)</em>" }
+            });
+        };
+    </script>
+
+
+    <title>الفعاليات- بوابة الخيل</title>
+</head>
+
+<body>
+    <header>
+        <!-- ! main nav -->
+        <nav class="navbar navbar-expand-lg navbar-light nav-main">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img alt="" height="100" src="./assets/images/logo.svg" width="200" />
+                </a>
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                    type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav main-menu m-auto">
+                        <li class="nav-item ">
+                            <a aria-current="page" class="nav-link" href="./index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./news.html">الأخبار</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">مجتمع الخيل</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./events.html">الفعاليات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ميديا</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./services.html">دليل الخدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">دليل المرابط</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اتصل بنا</a>
+                        </li>
+                    </ul>
+                    <div class="social-media">
+                        <ul class="navbar-nav social">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ! banner  -->
+    <section class="banner container">
+        <div class="row">
+            <div class="col">
+                <a href="#">
+                    <img alt="banner" class="w-100" src="./assets/images/banner.svg" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- !Homepage -->
+    <section class="homepage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 right-pnl events-archive">
+                    <!-- !archive events -->
+                    <div class="row">
+                        <div class="head">
+                            <span class="home-title"><i class="fas fa-home"></i></span>
+                            <span class="home-title"><a href="#">الرئيسية</a></span>
+                            <span>/</span>
+                            <span class="news-title"><a href="#">الفعاليات</a></span>
+                        </div>
+                    </div>
+                    <div class="content my-3">
+                        <div class="row">
+                            <div class="filter">
+                                <form action="" class="search-events">
+                                    <input type="text" name="eventName" id="eventName" placeholder="بحث بالاسم" />
+                                    <select name="type" id="type">
+                                        <option value="" disabled selected hidden>النوع</option>
+                                        <option value="type 1">type 1</option>
+                                        <option value="type 2">type 2</option>
+                                        <option value="type 3">type 3</option>
+                                        <option value="type 4">type4</option>
+                                    </select>
+                                    <select name="country" id="country">
+                                        <option value="" disabled selected hidden>البلد</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Palestine">Palestine</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                    <select name="city" id="city">
+                                        <option value="" disabled selected hidden>المدينة</option>
+                                        <option value="jeddah">jeddah</option>
+                                        <option value="cairo">Saudi Arabia</option>
+                                        <option value="Jakrta">jakrta</option>
+                                        <option value="frankfort">frankfort</option>
+                                    </select>
+                                    <input type="text" id="from" name="from" placeholder="من"
+                                        onfocus="(this.type='date')" onblur="(this.type='text')">
+                                    <input type="text" id="to" name="الى" placeholder=' الى'
+                                        onfocus="(this.type='date')" onblur="(this.type='text')">
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <!-- ! items  -->
+                        <div class="row items">
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="./assets/images/news/news-2.png" class="img-fluid " alt="njkj">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    بطولة العالم باريس 2021 لجمال الخيل
+                                                </h5>
+                                                <div class="loc-dur">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-flag"></i></span>
+                                                        <span>السعودية</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                                        <span>الرياض</span>
+                                                    </div>
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-clock"></i></span>
+                                                        <span>يومان</span>
+                                                    </div>
+                                                </div>
+                                                <div class="start-end">
+                                                    <div class="seg">
+                                                        <span><i class="fas fa-calendar"></i></span>
+                                                        <div class="dates">
+                                                            <span>من</span>
+                                                            <span>الجمعة, 3-12-2021</span>
+                                                            <span>الى</span>
+                                                            <span>الاحد, 5-12-2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="add-to-calender">
+                                                    <div class="title">
+                                                        <p>اضف للتقويم</p>
+                                                    </div>
+                                                    <div class="calenders">
+                                                        <div class="seg">
+                                                            <div title="Add to Calendar" class="addeventatc">
+                                                                Add to Calendar
+                                                                <span class="start">01/21/2022 08:00 AM</span>
+                                                                <span class="end">01/21/2022 10:00 AM</span>
+                                                                <span class="timezone">America/Los_Angeles</span>
+                                                                <span class="title">Summary of the event</span>
+                                                                <span class="description">Description of the
+                                                                    event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item -->
+                        </div>
+                        <!-- ! items  -->
+
+                    </div>
+                    <!-- !archive events  -->
+                </div>
+                <div class="col-md-3 left-pnl">
+                    <div class="adv">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img alt="ihorses" class="img-fluid" src="./assets/images/ihorses.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- !calender  -->
+                    <div class="calender my-3">
+                        <div class="calender-container">
+                            <div class="head">
+                                <div class="title">
+                                    <span><i class="fas fa-calendar-day"></i></span>
+                                    <span>الفعاليات</span>
+                                </div>
+                                <div class="date">
+                                    <span>2021</span>
+                                </div>
+                            </div>
+                            <div class="months d-flex justify-content-center">
+                                <span><i class="fas fa-chevron-right"></i></span>
+                                <ul class="d-flex list-unstyled ">
+                                    <li data-class='jan' class='active'><a href="#">يناير</a></li>
+                                    <li data-class='feb'><a href="#">فبراير</a></li>
+                                    <li data-class='march'><a href="#">مارس</a></li>
+                                    <li data-class='april'><a href="#">ابريل</a></li>
+                                    <li data-class='may'><a href="#">مايو</a></li>
+                                    <li data-class='jun'><a href="#">يونيو</a></li>
+                                </ul>
+                                <span><i class="fas fa-chevron-left"></i></span>
+                            </div>
+
+                            <div class="calender-events">
+                                <ul class="list-unstyled d-flex flex-column my-3">
+                                    <li class="feb">
+                                        <div class="num">
+                                            <span>الخميس</span>
+                                            <span>23</span>
+                                            <span>فبراير</span>
+                                        </div>
+                                        <div class="title">
+                                            <p>بطولة العرب 2021 لجمال الخيل
+                                                العربية الأصيلة بالمزاحمية</p>
+                                        </div>
+                                    </li>
+                                    <li class="april">
+                                        <div class="num">
+                                            <span>الخميس</span>
+                                            <span>23</span>
+                                            <span>ابريل</span>
+                                        </div>
+                                        <div class="title">
+                                            <p>بطولة العرب 2021 لجمال الخيل
+                                                العربية الأصيلة بالمزاحمية</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !calender  -->
+
+                    <!-- !studs guide -->
+
+                    <div class="studs-guide">
+                        <a href="#">
+                            <img src="./assets/images/stud-guide.png" alt="" class='img-fluid'>
+                        </a>
+                    </div>
+                    <!-- !studs guide -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- !footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img alt="footer-logo" class="img-responsive img-fluid" src="./assets/images/footer-logo.png">
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="">بوابة الخيل</a></li>
+                    <li><a href="">الاخبار</a></li>
+                    <li><a href="">مجتمع الخيل</a></li>
+                    <li><a href="">تغطية مصورة</a></li>
+                    <li><a href="">مكتبة الفيديو</a></li>
+                </ul>
+            </div>
+            <div class="events">
+                <ul>
+                    <li><a href="">الفعاليات</a></li>
+                    <li><a href="">دليل المرابط</a></li>
+                    <li><a href="">دليل الخدمات</a></li>
+                </ul>
+            </div>
+            <div class="share">
+                <ul>
+                    <li><a href="">شاركنا</a></li>
+                    <li><a href="">اضف خدمة(منشأة)</a></li>
+                    <li><a href="">اضف مربط</a></li>
+                    <li><a href="">اضف فعالية</a></li>
+                </ul>
+            </div>
+            <div class="platinum">
+                <h5>الراعي البلاتيني</h5>
+                <img alt="" class="img-responsive img-fluid" src="./assets/images/platinum.png">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                    <div class="copyrights">
+                        <div class="first">
+                            <span>جميع الحقوق محفوظة 2022 </span>
+                            <span>صنع <img alt='heart' height="30" src='./assets/images/heart.gif' width="30" /> في لغة
+                                الفن</span>
+                        </div>
+                        <div class="second">
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
