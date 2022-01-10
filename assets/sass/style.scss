@@ -1347,6 +1347,80 @@ footer {
   }
 }
 
+// horses society
+.horses-society-main-container {
+  .head {
+    margin: 1.5rem 0;
+    color: $gray;
+    .home-title {
+      a {
+        color: $gray;
+        text-decoration: none;
+      }
+      i {
+        color: $gray;
+      }
+    }
+    .news-title {
+      a {
+        color: $secondary_color;
+        text-decoration: none;
+      }
+    }
+  }
+  .horses-society-archive {
+    .news-slider {
+      display: flex;
+      flex-direction: column;
+
+      .tow {
+        display: flex;
+      }
+      .card {
+        .card-img {
+          max-height: 400px;
+        }
+        img.card-img {
+          object-fit: cover;
+        }
+        .card-img-overlay {
+          margin-bottom: 0;
+
+          p:nth-child(2) {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+
+    .items {
+      margin-top: 1rem;
+      .item {
+        margin: 1rem 0 3rem 0;
+      }
+      .card {
+        border: none;
+        .card-img-top {
+          border-radius: 0;
+        }
+        .card-body {
+          padding: 0;
+          a {
+            color: $secondary_color;
+            text-decoration: none;
+          }
+          .news-date {
+            margin-top: 0.5rem;
+            span:nth-child(1) {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 //  media query
 
 @media screen and (max-width: 414px) {
