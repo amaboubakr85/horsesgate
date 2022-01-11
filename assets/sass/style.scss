@@ -1421,6 +1421,146 @@ footer {
   }
 }
 
+// studs guide
+.studs-guide-main-container {
+  .head {
+    .home-title {
+      a {
+        color: $gray;
+        text-decoration: none;
+      }
+      i {
+        color: $gray;
+      }
+    }
+    .news-title {
+      a {
+        color: $secondary_color;
+        text-decoration: none;
+      }
+    }
+  }
+  .studs-guide-content {
+    .filter {
+      display: flex;
+      justify-content: space-between;
+
+      .form-search {
+        form {
+          display: flex;
+          align-items: center;
+          input[type='text'],
+          select {
+            margin: 0 0.2rem;
+            height: 40px;
+            border: 1px solid $gray;
+            background-color: $main_color;
+            color: $gray;
+            padding: 0.5rem;
+            font-size: 13px;
+          }
+          input[type='text'] {
+            min-width: 300px;
+          }
+        }
+      }
+      .sort {
+        a {
+          color: $secondary_color;
+          text-decoration: none;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+    .studs-guide-items {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2rem 0 3rem 0;
+      .item {
+        flex: 29%;
+        margin: 0.2rem;
+        .card {
+          display: flex;
+          border: none;
+          .card-img {
+            padding: 1rem;
+            border: 1px solid $gray;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            border-radius: 0;
+            img {
+              width: 160px;
+              height: 160px;
+              object-fit: contain;
+            }
+          }
+          .card-body {
+            padding: 0;
+            a {
+              color: $secondary_color;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.studs-single-container {
+  .head {
+    .home-title {
+      a {
+        text-decoration: none;
+        color: $gray;
+      }
+      i {
+        color: $gray;
+      }
+    }
+    .news-title {
+      a {
+        color: $secondary_color;
+        text-decoration: none;
+      }
+    }
+    margin-bottom: 2rem;
+  }
+  .section-one {
+    .item {
+      width: 100%;
+      height: 100%;
+      .card {
+        border: none;
+        .card-img {
+          padding: 0.5rem;
+          display: flex;
+          justify-content: center;
+          border: 1px solid $gray;
+          img {
+            width: 230px;
+            height: 230px;
+            object-fit: contain;
+          }
+        }
+        .card-body {
+          a {
+            text-decoration: none;
+            color: $secondary_color;
+          }
+        }
+      }
+    }
+  }
+}
+
 //  media query
 
 @media screen and (max-width: 414px) {
@@ -1465,6 +1605,20 @@ footer {
   .events-archive .filter form.search-events input[type='text'],
   .events-archive .filter form.search-events select,
   .events-archive .filter form.search-events input[type='date'] {
+    width: 100%;
+  }
+
+  .studs-guide-main-container .studs-guide-content .filter {
+    flex-direction: column;
+  }
+  .studs-guide-main-container .studs-guide-content .filter .form-search form input[type='text'] {
+    width: 100%;
+  }
+  .studs-guide-main-container .studs-guide-content .filter .form-search form {
+    flex-direction: column;
+  }
+  .studs-guide-main-container .studs-guide-content .filter .form-search form input[type='text'],
+  .studs-guide-main-container .studs-guide-content .filter .form-search form select {
     width: 100%;
   }
 }
