@@ -29,3 +29,7 @@ $('.months ul li').on('click', function (e) {
     .not('.' + cat)
     .hide()
 })
+
+;(function () {
+  var $gallery = new SimpleLightbox('.stud-gallery .content a', {})
+})()
