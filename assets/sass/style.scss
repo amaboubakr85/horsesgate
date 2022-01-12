@@ -1676,6 +1676,71 @@ footer {
   direction: ltr;
 }
 
+// contact-us
+.contact-us-page {
+  min-height: 150vh;
+  .contact-us {
+    .content {
+      display: flex;
+      min-height: 70vh;
+      .form,
+      .contact-img {
+        flex: 1;
+      }
+      .form {
+        background: $gray;
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 0 2rem 0 0;
+          input[type='text'],
+          input[type='email'],
+          textarea {
+            width: 70%;
+            margin-bottom: 15px;
+            padding: 10px;
+          }
+          input[type='text'],
+          input[type='email'],
+          input[type='submit'] {
+            height: 35px;
+            border: none;
+          }
+          input[type='submit'] {
+            width: 50%;
+            margin: 0 10%;
+            border: none;
+            background: $alt_color;
+            color: $main_color;
+          }
+          textarea {
+            border: none;
+          }
+        }
+      }
+      .contact-img {
+        background: $primary_color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img {
+          width: 100%;
+          height: 80%;
+          object-fit: cover;
+          position: absolute;
+          top: 10%;
+          left: 20%;
+        }
+      }
+    }
+  }
+}
+
 //  media query
 
 @media screen and (max-width: 414px) {
@@ -1747,5 +1812,32 @@ footer {
   .single-service .filter {
     flex-direction: column;
     align-items: center;
+  }
+  .contact-us-page {
+    min-height: 80vh;
+    .contact-us {
+      .content {
+        flex-direction: column;
+        .form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          form {
+            padding: 0;
+            align-items: center;
+          }
+          padding: 10px;
+        }
+        .contact-img {
+          height: 500px;
+          width: 100%;
+          img {
+            position: relative;
+            left: 0;
+            padding: 10px;
+          }
+        }
+      }
+    }
   }
 }
