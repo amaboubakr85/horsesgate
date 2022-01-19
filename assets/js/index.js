@@ -29,7 +29,13 @@ $('.months ul li').on('click', function (e) {
     .not('.' + cat)
     .hide()
 })
-
 ;(function () {
   var $gallery = new SimpleLightbox('.stud-gallery .content a', {})
+})()
+
+;(function () {
+  var $gallery = new SimpleLightbox(
+    '.services-grandchild-gallery .services-grandchild-container .photos a',
+    {}
+  )
 })()
